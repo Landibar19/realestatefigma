@@ -2,18 +2,24 @@ import { Box, IconButton, Typography } from '@mui/material'
 import React, { useState } from 'react'
 import SearchComponent from '../../Search/Search'
 import useNavBar from '../../../hooks/useNavBar'
+import bgImage from '../../../assets/Section1/bgImage.png'
 
 export const Section1 = () => {
     const [active, setActive] = useState('Sale')
     const{isMobileView} = useNavBar();
   return (
     <Box 
-    sx={{display: 'flex', 
+    sx={{
+      display: 'flex', 
     flexDirection: 'column', 
     alignItems: 'center', 
-    justifyContent: 'center', 
-    height:'100vh', 
-    width:'100%',
+    justifyContent: 'center',
+    backgroundImage: `url(${bgImage})`,
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover',
+          width: '100%',
+          height:'100vh', 
+
     gap: 3,
     }}
     >

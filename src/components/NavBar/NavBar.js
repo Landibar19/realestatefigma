@@ -34,7 +34,7 @@ export default function NavBar() {
     <AppBar 
       position="absolute" 
       color='transparent' 
-      sx={{minHeight:'60px',padding:4, justifyContent: 'center',marginTop:3}}
+      sx={{height:'60px',padding:4, justifyContent: 'center'}}
     >
       <Box
         sx={{
@@ -88,12 +88,13 @@ export default function NavBar() {
           mobileOpen={mobileOpen} 
         />
         <Box sx={{ 
-          display: isMobileView ? 'none': 'flex',
-          flexDirection: 'row',
+          display: 'flex',
+          flexDirection:isMobileView ? 'column': 'row',
           justifyContent: 'space-between',
           position: isMediumScreen ? 'absolute' : 'relative',
           top: isMediumScreen ? '100%' : 'initial',
-          gap:2,
+          gap:1,
+          paddingBottom:5
         }}>
           <IconButton sx={{color:'white'}}>
             <PhoneOutlinedIcon />
