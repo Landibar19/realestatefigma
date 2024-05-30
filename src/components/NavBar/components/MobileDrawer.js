@@ -3,10 +3,17 @@ import React from 'react';
 import { Drawer, List, ListItem, ListItemText, Typography } from '@mui/material';
 import useNavBar from '../../../hooks/useNavBar';
 
-function MobileDrawer({ mobileOpen, handleClose }) {
+function MobileDrawer({children, mobileOpen, handleClose }) {
   const { menu } = useNavBar();
   return (
-    <Drawer variant="temporary" open={mobileOpen} onClose={handleClose}>
+    <Drawer 
+      variant="temporary" 
+      open={mobileOpen} 
+      onClose={handleClose}
+      PaperProps={{ 
+        sx: { width: '50%', backgroundColor:'rgb(255, 255, 255,0.8)' } 
+      }}
+    >
       <div>
         <List>
           {menu.map((item) => (
@@ -18,6 +25,7 @@ function MobileDrawer({ mobileOpen, handleClose }) {
               </ListItemText>
             </ListItem>
           ))}
+          {children}
         </List>
       </div>
     </Drawer>

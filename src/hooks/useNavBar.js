@@ -10,6 +10,7 @@ export default function useNavBar() {
   const [anchorEl, setAnchorEl] = useState(null);
   const [activeItem, setActiveItem] = useState(null);
   const isMobileView = useMediaQuery(theme.breakpoints.down('sm'));
+  const isMediumView = useMediaQuery(theme.breakpoints.down('md'));
 
 
   const handleDrawerToggle = () => {
@@ -46,6 +47,7 @@ export default function useNavBar() {
     anchorEl,
     activeItem,
     isMobileView,
+    isMediumView,
     handleDrawerToggle,
     handleToggle,
     handleClose

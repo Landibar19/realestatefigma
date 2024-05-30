@@ -1,23 +1,14 @@
 import React from 'react';
-import { AppBar, Toolbar, IconButton, Box, Typography } from '@mui/material';
-import PhoneOutlinedIcon from '@mui/icons-material/PhoneOutlined';
+import { AppBar, Toolbar, IconButton, Box } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import PermIdentityOutlinedIcon from '@mui/icons-material/PermIdentityOutlined';
-
 import useNavBar from '../../hooks/useNavBar';
 import MobileDrawer from './components/MobileDrawer';
 import DesktopDrawer from './components/DesktopDrawer';
 import logo from '../../assets/Section1/logo-white.svg.png'
-import { useTheme } from '@mui/material/styles';
-import useMediaQuery from '@mui/material/useMediaQuery';
-
-
-
-
+import ButtonDrawer from './components/ButtonDrawer';
 
 export default function NavBar() {
-  const theme = useTheme();
-  const isMediumScreen = useMediaQuery(theme.breakpoints.down('md'));
+  
   const {
     menu,
     mobileOpen,
@@ -25,6 +16,7 @@ export default function NavBar() {
     anchorEl,
     activeItem,
     isMobileView,
+    isMediumView,
     handleDrawerToggle,
     handleToggle,
     handleClose
@@ -65,7 +57,7 @@ export default function NavBar() {
               <MenuIcon />
             </IconButton>
           ) : (
-           ''
+      ''
           )}
         </Toolbar>
         <DesktopDrawer 
@@ -86,31 +78,11 @@ export default function NavBar() {
           activeItem={activeItem} 
           isMobileView={isMobileView}
           mobileOpen={mobileOpen} 
-        />
-        <Box sx={{ 
-          display: 'flex',
-          flexDirection:isMobileView ? 'column': 'row',
-          justifyContent: 'space-between',
-          position: isMediumScreen ? 'absolute' : 'relative',
-          top: isMediumScreen ? '100%' : 'initial',
-          gap:1,
-          paddingBottom:5
-        }}>
-          <IconButton sx={{color:'white'}}>
-            <PhoneOutlinedIcon />
-            <Typography color='white'>
-              +1 234 567 890
-            </Typography>
-          </IconButton>
-          <IconButton sx={{width:'40px', color: 'white',  border: '1px solid white', borderRadius:'100%'}}>
-            <PermIdentityOutlinedIcon />
-          </IconButton>
-          <IconButton sx={{color: 'white',  border: '1px solid white', borderRadius:'24px'}}>
-            <Typography color='white'>
-              Add property
-            </Typography>
-          </IconButton>
-        </Box>
+        >
+          {isMobileView && <ButtonDrawer isMobileView={isMobileView} isMediumView={isMediumView}/>}
+        </MobileDrawer>
+       {isMobileView ? '' : <ButtonDrawer isMobileView={isMobileView} isMediumView={isMediumView}/>}
+        
       </Box>
     </AppBar>
   );
