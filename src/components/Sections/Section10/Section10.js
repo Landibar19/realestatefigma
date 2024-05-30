@@ -1,10 +1,9 @@
 import { Grid, Typography } from '@mui/material';
 import React from 'react';
 import SubscribeSection from './components/SubScribeSection';
-import Header from './components/Header';
 import ContentSection from './components/ContentSection';
 import QuickLinksSection from './components/QuickLinksSection';
-import logo from '../../../assets/Section1/logo-white.svg.png'
+
 
 export const Section10 = () => {
    

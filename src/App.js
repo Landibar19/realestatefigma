@@ -1,7 +1,6 @@
 
 import {BrowserRouter as Router } from 'react-router-dom';
 import './App.css';
-import NavBar from './components/NavBar/NavBar';
 import { HomePage } from './pages/Home/HomePage';
 
 import { ThemeProvider } from '@mui/material';
