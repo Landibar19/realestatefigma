@@ -13,8 +13,6 @@ export default function NavBar() {
     menu,
     mobileOpen,
     openItems,
-    anchorEl,
-    activeItem,
     isMobileView,
     isMediumView,
     handleDrawerToggle,
@@ -26,7 +24,7 @@ export default function NavBar() {
     <AppBar 
       position="absolute" 
       color='transparent' 
-      sx={{height:'60px',padding:4, justifyContent: 'center'}}
+      sx={{height:'60px',padding:4, }}
     >
       <Box
         sx={{
@@ -57,32 +55,23 @@ export default function NavBar() {
               <MenuIcon />
             </IconButton>
           ) : (
-      ''
+            ''
           )}
         </Toolbar>
         <DesktopDrawer 
-          menu={menu} 
+          menu={menu}
           handleToggle={handleToggle} 
-          openItems={openItems} 
-          anchorEl={anchorEl} 
-          handleClose={handleClose} 
-          activeItem={activeItem} 
+          openItems={openItems}  
           isMobileView={isMobileView} 
         />
         <MobileDrawer 
           menu={menu} 
-          handleToggle={handleToggle} 
-          openItems={openItems} 
-          anchorEl={anchorEl} 
           handleClose={handleClose} 
-          activeItem={activeItem} 
-          isMobileView={isMobileView}
           mobileOpen={mobileOpen} 
         >
-          {isMobileView && <ButtonDrawer isMobileView={isMobileView} isMediumView={isMediumView}/>}
+        {isMobileView && <ButtonDrawer isMobileView={isMobileView} isMediumView={isMediumView}/>}
         </MobileDrawer>
-       {isMobileView ? '' : <ButtonDrawer isMobileView={isMobileView} isMediumView={isMediumView}/>}
-        
+        {isMobileView ? '' : <ButtonDrawer isMobileView={isMobileView} isMediumView={isMediumView}/>}
       </Box>
     </AppBar>
   );

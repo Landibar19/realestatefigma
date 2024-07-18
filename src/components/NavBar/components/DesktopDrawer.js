@@ -1,13 +1,12 @@
 import React from 'react';
 import { IconButton} from '@mui/material';
-import useNavBar from '../../../hooks/useNavBar';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
 
 
 
-export default function DesktopDrawer() {
- const {menu, isMobileView , openItems, handleToggle } = useNavBar();
+export default function DesktopDrawer( {menu, isMobileView , openItems, handleToggle}) {
+
   return (
     <div>
       {isMobileView ? null : Array.isArray(menu) && menu.map((data) => (

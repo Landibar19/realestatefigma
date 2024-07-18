@@ -19,29 +19,29 @@ const ImageSlider = ({ images }) => {
         border:'1px solid grey',
         borderRadius: '16px',
         backgroundColor: 'grey',
-        width:'70px',
-        height:'46px'
+        width: { xs: '50px', sm: '60px', md: '70px' },
+        height: { xs: '30px', sm: '35px', md: '40px' }, 
          }}>
         <ArrowBackIosIcon />
       </IconButton>
       <img 
       src={images[currentSlide]} 
       alt={`Slide ${currentSlide + 1}`} 
-      style={{ width: '100%', height: '280px' }} 
+      style={{ width: '100%', height: '100%', maxHeight: '400px', }} 
       />
-      <IconButton 
-      onClick={nextSlide} 
-      sx={{ 
-        position: 'absolute', 
-        right: 0, 
-        top: '50%', 
-        transform: 'translateY(-50%)', 
-        border:'1px solid grey',
-        borderRadius: '24px',
-        backgroundColor: 'grey',
-        width:'70px',
-        height:'46px'
-         }}>
+      <IconButton
+  onClick={nextSlide}
+  sx={{
+    position: 'absolute',
+    right: 0,
+    top: '50%',
+    transform: 'translateY(-50%)',
+    border: '1px solid grey',
+    borderRadius: '24px',
+    backgroundColor: 'grey',
+    width: { xs: '50px', sm: '60px', md: '70px' },
+    height: { xs: '30px', sm: '35px', md: '40px' }, 
+  }}>
         <ArrowForwardIosIcon />
       </IconButton>
     </Box>

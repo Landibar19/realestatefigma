@@ -3,6 +3,8 @@ import photo2 from '../../assets/Section2/photo2.png';
 import photo3 from '../../assets/Section2/photo3.png';
 
 export const Section2Content = [
+
+
     {
         image: photo1,
         title:'Skyper Pool Apartment',

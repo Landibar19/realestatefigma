@@ -31,7 +31,7 @@ const ButtonDrawer = ({isMobileView, isMediumView}) => {
         <IconButton 
         sx={{
             color:isMobileView && 'black',  
-            border: isMobileView? '1px solid black': '1px solid white', 
+            border: isMobileView ? '1px solid black': '1px solid white', 
             borderRadius:'24px'
             }}>
         <Typography sx={{color:isMobileView && 'black'}}>

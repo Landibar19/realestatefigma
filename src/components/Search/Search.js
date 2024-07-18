@@ -11,28 +11,34 @@ const SearchComponent = () => {
         alignItems: 'center',
         width: '100%', 
         borderRadius: '36px', 
-        backgroundColor: 'white' 
+        backgroundColor: 'white',
       }}
     >
       <TextField 
-        variant="outlined" 
-        placeholder="Enter Name, Keywords..."
-        fullWidth
-        sx={{
-          '& .MuiOutlinedInput-root': {
-            '&.Mui-focused fieldset': {
-              borderColor: 'transparent',
-            },
-          },
-        }}
-      />
+  variant="outlined" 
+  placeholder="Enter Name, Keywords..."
+  fullWidth
+  sx={{
+    '& .MuiOutlinedInput-root': {
+      '& fieldset': {
+        borderColor: 'transparent',
+      },
+      '&:hover fieldset': {
+        borderColor: 'transparent',
+      },
+      '&.Mui-focused fieldset': {
+        borderColor: 'transparent', 
+      },
+    },
+  }}
+/>
       <Box 
         sx={{
           position: 'absolute', 
           right: '10px', 
           backgroundColor: 'rgb(231, 200, 115)', 
           height: '80%',
-          width: '10%',
+          width: '12%',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',

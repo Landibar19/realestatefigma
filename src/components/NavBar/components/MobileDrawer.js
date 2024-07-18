@@ -1,10 +1,8 @@
 import React from 'react';
-
 import { Drawer, List, ListItem, ListItemText, Typography } from '@mui/material';
-import useNavBar from '../../../hooks/useNavBar';
 
-function MobileDrawer({children, mobileOpen, handleClose }) {
-  const { menu } = useNavBar();
+function MobileDrawer({children,menu, mobileOpen, handleClose }) {
+
   return (
     <Drawer 
       variant="temporary" 

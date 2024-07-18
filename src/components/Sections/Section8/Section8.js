@@ -1,72 +1,61 @@
-import { Card, CardContent, CardMedia, Typography, Grid, Box } from '@mui/material';
-import { Section8Content } from '../../SectionsContent/Section8Content';
-import { useState } from 'react';
+import React, { useState } from 'react';
+import { Box, Grid, Card, CardContent, CardMedia, Typography } from '@mui/material';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
+import { Section8Content } from '../../SectionsContent/Section8Content';
 
 export const Section8 = () => {
-    const [showMore, setShowMore] = useState(false);
-    const data = Section8Content;
+    const [expandedStates, setExpandedStates] = useState({});
+    const toggleShowMore = index => setExpandedStates(prev => ({ ...prev, [index]: !prev[index] }));
+
     return (
-        <Box height="auto">
-        <Box sx={{display:'flex', flexDirection:'column'}}>
-          <Typography component="div" color='black' sx={{fontSize:40,fontWeight: 'bold', padding:3}}>
-            Recent articles nad news
-        </Typography>
-        <Typography variant="subtitle1" color="black" sx={{padding:5}}>
-            lorem ipsum dolor sit amet, consectetur adipiscing elit
-        </Typography>  
+        <Box>
+            <Typography variant="h4" color="black" sx={{ fontWeight: 'bold', mb: 2 }}>
+                Recent articles and news
+            </Typography>
+            <Typography variant="subtitle1" color="black" sx={{ mb: 2 }}>
+                lorem ipsum dolor sit amet, consectetur adipiscing elit
+            </Typography>
+            <Grid container spacing={2}>
+                {Section8Content.map((item, index) => (
+                    <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
+                        <Card>
+                            <CardMedia component="img" height="217" image={item.image} alt={item.title} />
+                            <CardContent>
+                                <Box sx={{ display: 'flex', justifyContent: "center", gap: 2, mb: 1 }}>
+                                    <Typography variant="subtitle1" color="text.secondary">
+                                        {item.propertyType} <FiberManualRecordIcon fontSize="small" />
+                                    </Typography>
+                                    <Typography variant="subtitle2" color="text.secondary">
+                                        {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+                                    </Typography>
+                                </Box>
+                                <Typography sx={{ color: 'black', fontWeight: "bold", mb: 1 }}>
+                                    {item.title}
+                                </Typography>
+                                <Typography variant="body2" color="text.secondary">
+                                    {expandedStates[index] ? item.description : `${item.description.substring(0, 100)}...`}
+                                </Typography>
+                                <Typography 
+                                    variant="body2" 
+                                    onClick={() => toggleShowMore(index)} 
+                                    sx={{ 
+                                        cursor: 'pointer', 
+                                        display: 'flex', 
+                                        justifyContent: 'center', 
+                                        alignItems: "center", 
+                                        gap: 1, 
+                                        mt: 1,
+                                        color: 'blue',}}
+                                >
+                                    {expandedStates[index] ? 'Read Less' : 'Read More'}
+                                    <ArrowRightAltIcon />
+                                </Typography>
+                            </CardContent>
+                        </Card>
+                    </Grid>
+                ))}
+            </Grid>
         </Box>
-        <Grid container spacing={2} padding={2} >
-            {data.map((item, index) => (
-                <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
-                    <Card sx={{ width: '100%', height: 'auto' }}>
-                        <CardMedia
-                            component="img"
-                            width='326'
-                            height="217"
-                            image={item.image}
-                            alt={item.title}
-                        />
-                        <CardContent>
-                        <Box sx={{display:'flex',flexDirection:'row', justifyContent:"center", gap:2}}>
-                        <Typography variant="subtitle1" color="text.secondary">
-                                {item.propertyType} <FiberManualRecordIcon style={{fontSize:10}}/>
-                            </Typography>
-                            <Typography variant="subtitle2" color="text.secondary">
-                                {new Date().toLocaleDateString('en-US', 
-                                { year: 'numeric', month: 'long', day: 'numeric'
-                                })}
-                            </Typography>
-                        </Box>
-                            <Typography component="div" sx={{color:'black', fontSize:17, fontWeight:"bold"}}>
-                                {item.title}
-                            </Typography>
-                            <Box>
-                            <Typography variant="body2" color="text.secondary">
-                                {showMore ? item.description : item.description.substring(0, 100)}
-                            </Typography>
-                            <Typography 
-                            variant="body2" color="text.secondary" 
-                            onClick={() => setShowMore(!showMore)} 
-                            style={{
-                                color: 'black', 
-                                cursor: 'pointer',
-                                display:'flex',
-                                justifyContent:'center',
-                                alignItems:"center",
-                                gap:3
-                            }}>
-                                {showMore ? 'Read Less' : 'Read More'}
-                                <ArrowRightAltIcon/>
-                            </Typography>
-                            </Box>
-                        </CardContent>
-                    </Card>
-                </Grid>
-            ))}         
-        </Grid>
-        </Box>
-        
     );
 };
