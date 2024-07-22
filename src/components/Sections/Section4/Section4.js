@@ -14,9 +14,9 @@ export const Section4 = () => {
             flexDirection:'column',
             alignItems:'center', 
             backgroundColor: 'rgb(231, 200, 115)', 
-            paddingBottom:'10%',
             borderRadius: '16px',
             margin: 'auto',
+            padding:'5%'
             }}
             >
             <Box padding="5%">
