@@ -39,7 +39,16 @@ const CardSlider = ({ data }) => {
   return (
     <Slider {...settings} slidesToShow={isMobileView ? 1 : isMediumView ? 2 : 3}>
       {data.map((item, index) => (
-        <Box key={index} sx={{ m: 'auto', p: '10px', position: 'relative', width: { xs: '90%', sm: '300px' }, height: "auto", display: 'flex', flexDirection: 'column', borderRadius: '24px' }}>
+        <Box key={index} 
+        sx={{ 
+          m: 'auto', 
+          p: '10px', 
+          width: { xs: '90%', sm: '300px' }, 
+          height: "auto", 
+          display: 'flex', 
+          flexDirection: 'column', 
+          borderRadius: '24px' 
+          }}>
           <Card sx={{position:'relative', margin:3}}>
             <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', flexGrow: 1 }}>
               <img 
