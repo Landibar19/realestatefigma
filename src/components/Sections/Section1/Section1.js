@@ -14,7 +14,7 @@ const useStyles = (isMobileView) => ({
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
     width: '100%',
-    height: '100vh', 
+    height: '100%', 
     gap: 3,
   },
   titleBox: {
