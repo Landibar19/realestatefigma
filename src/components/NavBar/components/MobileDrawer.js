@@ -8,6 +8,7 @@ function MobileDrawer({children,menu, mobileOpen, handleClose }) {
       variant="temporary" 
       open={mobileOpen} 
       onClose={handleClose}
+      anchor='left'
       PaperProps={{ 
         sx: { width: '50%', backgroundColor:'rgb(255, 255, 255,0.8)' } 
       }}

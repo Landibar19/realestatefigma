@@ -1,6 +1,6 @@
 
 import {BrowserRouter as Router } from 'react-router-dom';
-import './App.css';
+
 import { HomePage } from './pages/Home/HomePage';
 
 import { ThemeProvider } from '@mui/material';

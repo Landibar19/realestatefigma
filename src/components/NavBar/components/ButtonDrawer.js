@@ -10,6 +10,7 @@ const ButtonDrawer = ({isMobileView, isMediumView}) => {
         flexDirection: isMobileView ? 'column': 'row',
         justifyContent: 'space-between',
         position: isMediumView ? 'absolute' : 'relative',
+        padding: isMediumView ? '10px' : '0',
         top: isMediumView ? '100%' : 'initial',
         gap:1,
     }}>

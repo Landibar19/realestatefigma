@@ -12,18 +12,16 @@ export const Section3 = () => {
         <Typography sx={{ color: 'black', fontSize: 17}}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit
         </Typography>
-        <Box display="flex" justifyContent="center" flexWrap="wrap" padding={2}>
+        <Box width='100%' display="flex" justifyContent="center" flexWrap="wrap" >
           {Section3Content.map((item, index) => (
             <Card 
             key={index} 
-            style={{
-            
-              width: index === 0 || index === 5 ? '620px' : '300px',
+            sx={{
+              width: index === 0 || index === 5 ? '520px' : '300px',
               height:'300px', 
-              position: 'relative', 
-              margin: 10, 
-              padding:5 ,
+              position: 'relative',
               borderRadius: '16px',
+              margin: 2,
               }}>
               <img  src={item.image} alt={item.city} 
               style={{ 
@@ -34,7 +32,8 @@ export const Section3 = () => {
                 position: 'absolute',
                 top: 0,
                 left: 0,
-                zIndex: 1
+                zIndex: 1,
+                padding:2
                 }}/>
                 <CardContent style={{ position: 'absolute', top: 10, left:10, zIndex: 2 }}>
                 <Typography sx={{fontSize: 17, fontWeight:'regular'}}>{item.propertyNumber}</Typography>

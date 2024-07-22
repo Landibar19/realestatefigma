@@ -1,4 +1,3 @@
-import {Container } from '@mui/material';
 import React from 'react';
 import { Section1 } from '../../components/Sections/Section1/Section1';
 import { Section2 } from '../../components/Sections/Section2/Section2';
@@ -16,7 +15,7 @@ import NavBar from '../../components/NavBar/NavBar';
 
 export const HomePage = () => {
   return (
-    <Container maxWidth="xxl" sx={{height: '100vh'}}>
+    <div style={{height: '100vh', padding:15}}>
       <NavBar/> 
       <Section1/>
       <Section2 />
@@ -28,6 +27,6 @@ export const HomePage = () => {
       <Section8 />
       <Section9/>
       <Section10 />
-    </Container>
+    </div>
   );
 };

@@ -65,7 +65,7 @@ function CallToActionSection() {
           </Typography>
         </Box>
         <IconButton sx={{
-          width: '174px', height: '54px', color: 'black', backgroundColor: 'rgba(231, 200, 115, 1)',
+          width: '170px', height: {xs:'35px', sm:'54px'}, color: 'black', backgroundColor: 'rgba(231, 200, 115, 1)',
           borderRadius: '8px', display: 'flex', justifyContent: 'space-evenly'
         }}>
           Register now

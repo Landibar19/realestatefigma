@@ -1,10 +1,10 @@
 import React from 'react';
-import { AppBar, Toolbar, IconButton, Box } from '@mui/material';
+import { AppBar, IconButton, Box } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import useNavBar from '../../hooks/useNavBar';
 import MobileDrawer from './components/MobileDrawer';
 import DesktopDrawer from './components/DesktopDrawer';
-import logo from '../../assets/Section1/logo-white.svg.png'
+import logo from '../../assets/Section1/logo-white.svg.png';
 import ButtonDrawer from './components/ButtonDrawer';
 
 export default function NavBar() {
@@ -24,7 +24,7 @@ export default function NavBar() {
     <AppBar 
       position="absolute" 
       color='transparent' 
-      sx={{height:'60px',padding:4, }}
+      sx={{height:'80px',padding:4, }}
     >
       <Box
         sx={{
@@ -36,28 +36,6 @@ export default function NavBar() {
         }}
       >
         <img src={logo} alt="Logo" style={{height:'100%', maxHeight:'30px'}} />
-        <Toolbar 
-          sx={{ 
-            height: 'auto',
-            justifyContent: 'center',
-            display: 'flex', 
-            flexDirection: 'row',
-            alignItems: 'center',
-          }}
-        >    
-          {isMobileView ? (
-            <IconButton
-              color="inherit"
-              aria-label="open drawer"
-              edge="end"
-              onClick={handleDrawerToggle}
-            >
-              <MenuIcon />
-            </IconButton>
-          ) : (
-            ''
-          )}
-        </Toolbar>
         <DesktopDrawer 
           menu={menu}
           handleToggle={handleToggle} 
@@ -69,9 +47,20 @@ export default function NavBar() {
           handleClose={handleClose} 
           mobileOpen={mobileOpen} 
         >
-        {isMobileView && <ButtonDrawer isMobileView={isMobileView} isMediumView={isMediumView}/>}
+          {isMobileView && <ButtonDrawer isMobileView={isMobileView} isMediumView={isMediumView}/>}
         </MobileDrawer>
         {isMobileView ? '' : <ButtonDrawer isMobileView={isMobileView} isMediumView={isMediumView}/>}
+        {isMobileView && (
+          <IconButton
+            color="inherit"
+            aria-label="open drawer"
+            edge="end"
+            onClick={handleDrawerToggle}
+            sx={{ marginLeft: 'auto' }} 
+          >
+            <MenuIcon />
+          </IconButton>
+        )}
       </Box>
     </AppBar>
   );

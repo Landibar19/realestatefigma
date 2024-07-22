@@ -36,6 +36,7 @@ export const Section6 = () => {
       borderRadius: '16px',
       margin: 'auto',
       marginTop: 5,
+      padding: 5,
     }}>
       <Grid container spacing={2} sx={{ justifyContent: 'center', alignItems: 'center' }}>
         <Grid item xs={12} sm={6}>
@@ -55,7 +56,7 @@ export const Section6 = () => {
           </Box>
         </Grid>
       </Grid>
-      <Box sx={{ width: '100%', display: 'flex', justifyContent: 'space-evenly', alignItems: 'center', flexDirection: 'column', paddingTop: 5 }}>
+      <Box sx={{ width: '100%', display: 'flex', justifyContent: 'space-evenly', alignItems: 'center', flexDirection:{xs:'column', sm:'row'}, paddingTop: 5 }}>
         {countUpData.map((data, index) => (
           <CountUpBox key={index} {...data} />
         ))}
