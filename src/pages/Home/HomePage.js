@@ -10,7 +10,7 @@ import { Section8 } from '../../components/Sections/Section8/Section8';
 import { Section9 } from '../../components/Sections/Section9/Section9';
 import { Section10 } from '../../components/Sections/Section10/Section10';
 import NavBar from '../../components/NavBar/NavBar';
-import { Box, Stack } from '@mui/material';
+import { Stack } from '@mui/material';
 
 
 
@@ -21,7 +21,6 @@ export const HomePage = () => {
       <Stack spacing={2} height='100vh'>
         <Section1/>
       </Stack>
-       
       <Section2 />
       <Section3 />
       <Section4/>
