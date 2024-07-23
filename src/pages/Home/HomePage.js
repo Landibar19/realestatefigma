@@ -10,17 +10,14 @@ import { Section8 } from '../../components/Sections/Section8/Section8';
 import { Section9 } from '../../components/Sections/Section9/Section9';
 import { Section10 } from '../../components/Sections/Section10/Section10';
 import NavBar from '../../components/NavBar/NavBar';
-import { Stack } from '@mui/material';
 
 
 
 export const HomePage = () => {
   return (
-  <div style={{padding:{xs:15,sm:10}, display:"flex", flexDirection:'column'}}>
+    <div style={{height: '100vh', padding:15}}>
       <NavBar/> 
-      <Stack spacing={2} height='100vh'>
-        <Section1/>
-      </Stack>
+      <Section1/>
       <Section2 />
       <Section3 />
       <Section4/>
