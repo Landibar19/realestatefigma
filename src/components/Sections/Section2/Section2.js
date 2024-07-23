@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Container, Typography, useTheme } from '@mui/material';
+import { Box, Typography, useTheme } from '@mui/material';
 import { Section2Content } from '../../SectionsContent/Section2Content';
 import CardSlider from '../../SlideShow/CardSlider';
 
