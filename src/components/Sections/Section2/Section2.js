@@ -7,12 +7,12 @@ export const Section2 = () => {
     const theme = useTheme();
     const data = Section2Content;
     return (
-        <Container maxWidth="xxl"
-        sx={{
+        <div 
+        style={{
             backgroundColor: 'rgb(233, 233, 233)',
             backgroundSize: 'cover',
             width: '100%',
-            height: '100%', 
+            height: 'auto', 
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
@@ -43,8 +43,11 @@ export const Section2 = () => {
                         padding: 1,
                     }
                 }}>Based on your view history</Typography>
-                <CardSlider data={data} />
+                <Box width='100%' display='flex' justifyContent='center'>
+                 <CardSlider data={data} /> 
+                </Box>
+                
             </Box>
-        </Container>
+        </div>
     )
 }
