@@ -8,15 +8,16 @@ import { Section6 } from '../../components/Sections/Section6/Section6';
 import { Section7 } from '../../components/Sections/Section7/Section7';
 import { Section8 } from '../../components/Sections/Section8/Section8';
 import { Section9 } from '../../components/Sections/Section9/Section9';
-import { Section10 } from '../../components/Sections/Section10/Section10';
-import NavBar from '../../components/NavBar/NavBar';
+import { Box } from '@mui/material';
+import { Footer } from '../../components/Footer/Footer';
+
+
 
 
 
 export const HomePage = () => {
   return (
-    <div style={{height: '100vh', padding:15}}>
-      <NavBar/> 
+    <Box style={{height: '100vh', padding:10}}>
       <Section1/>
       <Section2 />
       <Section3 />
@@ -26,7 +27,7 @@ export const HomePage = () => {
       <Section7/>
       <Section8 />
       <Section9/>
-      <Section10 />
-    </div>
+      <Footer/>
+    </Box>
   );
 };

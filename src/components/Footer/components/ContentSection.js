@@ -1,11 +1,11 @@
 import React from 'react';
 import { Grid, Typography } from '@mui/material';
-import { Section10Content } from '../../../SectionsContent/Section10Content';
+import { HeaderContent } from './FooterContent';
 
 
 const ContentSection = () => (
   <Grid container spacing={2}>
-    {Section10Content.map((content, index) => (
+    {HeaderContent.map((content, index) => (
       <Grid item  key={index}>
         <Grid container spacing={2}>
           <Grid item xs={12} sx={{textAlign:"left"}}>

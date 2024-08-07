@@ -22,9 +22,8 @@ export default function NavBar() {
 
   return (
     <AppBar 
-      position="absolute" 
-      color='transparent' 
-      sx={{height:'80px',padding:4, }}
+      position="absolute"  
+      sx={{height:'80px',padding: 4, backgroundColor: 'rgba(0,0,0,0.3)', backdropFilter: 'blur(5px)'}}
     >
       <Box
         sx={{

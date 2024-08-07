@@ -5,7 +5,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
-const Header = ({ logo }) => (
+const SocialNetwork = ({ logo }) => (
   <Box 
     sx={{ 
         width: '90%', 
@@ -36,4 +36,4 @@ const Header = ({ logo }) => (
   </Box>
 );
 
-export default Header;
+export default SocialNetwork;

@@ -3,6 +3,8 @@ import React from 'react';
 import SubscribeSection from './components/SubScribeSection';
 import ContentSection from './components/ContentSection';
 import QuickLinksSection from './components/QuickLinksSection';
+import SocialNetwork from './components/SocialNetwork';
+
 
 const InfoSection = ({ title, children }) => (
   <Grid item xs={6} sm={4} md={3} lg={2}>
@@ -17,14 +19,14 @@ const InfoSection = ({ title, children }) => (
   </Grid>
 );
 
-export const Section10 = () => {
+export const Footer = () => {
   return (
-    <div style={{backgroundColor:'black', borderRadius:'16px', padding:5}}>
+    <div style={{backgroundColor:'black', borderRadius:'16px', padding:5,}}>
       <Grid container spacing={2} paddingTop={5}>
         <Grid item xs={12} sm={4} md={3}>
           <SubscribeSection/>
         </Grid>
-        <Grid item xs={6} sm={4} md={3} sx={{display:'flex', flexDirection:'row'}}>
+        <Grid item xs={12} sm={4} md={3} sx={{display:'flex', flexDirection:'row'}}>
           <ContentSection/>
           <QuickLinksSection/>
         </Grid>
@@ -38,7 +40,9 @@ export const Section10 = () => {
         <InfoSection title="Our Address">
           <Typography>99 Fifth Avenue, 3rd Floor San Francisco, CA 1980</Typography>
         </InfoSection>
+        <SocialNetwork/>
       </Grid>
+  
     </div>
   );
 };

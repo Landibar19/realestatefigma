@@ -1,10 +1,15 @@
 
-import {BrowserRouter as Router } from 'react-router-dom';
+import {Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 
 import { HomePage } from './pages/Home/HomePage';
 
 import { ThemeProvider } from '@mui/material';
 import { useCustomTheme } from './hooks/useCustomTheme';
+import { Listings } from './pages/Listings/Listings';
+import NavBar from './components/NavBar/NavBar';
+import { Blog } from './pages/Blog/Blog';
+import { ContactUs } from './pages/Contacts/ContactUs';
+import { Pages } from '@mui/icons-material';
 
 function App() {
   const theme=useCustomTheme();
@@ -12,11 +17,18 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
     <div className="App">
-     
       <Router>
-          <HomePage/> 
+        <NavBar/>
+        <Routes>
+          <Route path="/" element={<HomePage/>} />
+          <Route path="/listings" element={<Listings/>} />
+          <Route path="/contact" element={<Blog/>} />
+          <Route path="/blog" element={<ContactUs/>} />
+          <Route path="/pages" element={<Pages/>} />
+        </Routes>
       </Router>    
     </div>
+
     </ThemeProvider>
   
   );

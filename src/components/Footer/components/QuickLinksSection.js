@@ -1,9 +1,9 @@
 import React from 'react';
 import { Grid, Typography } from '@mui/material';
-import { QuickLinksContent } from '../../../SectionsContent/Section10Content';
+import { QuickLinksContent } from './FooterContent';
 
 const QuickLinksSection = () => (
-  <Grid container spacing={2} paddingLeft={2}>
+  <Grid container spacing={2}>
     {QuickLinksContent.map((content, index) => (
       <Grid item  key={index}>
         <Grid container spacing={2}>
