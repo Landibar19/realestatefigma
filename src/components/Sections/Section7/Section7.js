@@ -66,10 +66,10 @@ return (
                     <img src={item.testimonialImage} alt={item.name} />
                     <Typography  color='black' variant="h6">{item.name}</Typography>
                     <Typography variant="subtitle2">{item.position}</Typography>
-                    <Typography variant="body1" color='black' >{item.feedback}</Typography>
+                    <Typography variant="body1" color='black' width='50%'>{item.feedback}</Typography>
                     </div>
                 ))}
-                <Box sx={{ width:'100%', display:'flex', flexDirection:'row', justifyContent:'flex-start', gap:3}}>
+                <Box sx={{ width:'100%', display:'flex', flexDirection:'row', gap:2}}>
                 <IconButton 
                 sx={{width:'50px', height:'30px', backgroundColor:'transparent', color:'black',border:'1px solid grey', borderRadius:'16px'}}
                 onClick={() => setCurrentSlide(currentSlide > 0 ? currentSlide - 1 : section7Content.testimonial.length - 1)}

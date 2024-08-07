@@ -17,7 +17,7 @@ import { Footer } from '../../components/Footer/Footer';
 
 export const HomePage = () => {
   return (
-    <Box style={{height: '100vh', padding:10}}>
+    <Box style={{height: '100vh', padding:13}}>
       <Section1/>
       <Section2 />
       <Section3 />

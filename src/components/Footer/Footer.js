@@ -21,7 +21,7 @@ const InfoSection = ({ title, children }) => (
 
 export const Footer = () => {
   return (
-    <div style={{backgroundColor:'black', borderRadius:'16px', padding:5,}}>
+    <div style={{backgroundColor:'black', borderRadius:'16px', padding:2,}}>
       <Grid container spacing={2} paddingTop={5}>
         <Grid item xs={12} sm={4} md={3}>
           <SubscribeSection/>
