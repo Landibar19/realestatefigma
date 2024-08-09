@@ -1,6 +1,6 @@
 import { Box, Divider, Grid, IconButton, Rating, Typography } from '@mui/material';
 import CountUp from 'react-countup';
-import { section7Content } from '../../SectionsContent/Section7Content';
+import { section7Content } from '../../../api/SectionsContent/Section7Content';
 import { useState } from 'react';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';

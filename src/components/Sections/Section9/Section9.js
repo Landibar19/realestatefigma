@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Box, Tabs, Tab, Typography, Grid, IconButton } from '@mui/material';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
-import { Section9Content } from '../../SectionsContent/Section9Content';
+import { Section9Content } from '../../../api/SectionsContent/Section9Content';
 import useNavBar from '../../../hooks/useNavBar';
 
 export const Section9 = () => {

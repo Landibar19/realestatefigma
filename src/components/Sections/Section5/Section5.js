@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, IconButton, Typography } from '@mui/material';
-import { Section5Content } from '../../SectionsContent/Section5Content';
+import { Section5Content } from '../../../api/SectionsContent/Section5Content';
 import ImageSlider from '../../SlideShow/ImageSlider';
 import ReactPlayer from 'react-player';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';

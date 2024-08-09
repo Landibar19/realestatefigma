@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Grid, Typography } from '@mui/material'
-import { Section4Content } from '../../SectionsContent/Section4Content';
+import { Section4Content } from '../../../api/SectionsContent/Section4Content';
 
 export const Section4 = () => {
     const data = Section4Content;

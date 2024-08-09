@@ -1,6 +1,6 @@
 import { Box, Grid, IconButton, Typography } from '@mui/material';
 import React from 'react';
-import { section6Content } from '../../SectionsContent/Section6Content';
+import { section6Content } from '../../../api/SectionsContent/Section6Content';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import CountUp from 'react-countup';
 

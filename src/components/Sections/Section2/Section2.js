@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Container, Typography } from '@mui/material'
-import { Section2Content } from '../../SectionsContent/Section2Content';
+import { Section2Content } from '../../../api/SectionsContent/Section2Content';
 import CardSlider from '../../SlideShow/CardSlider';
 
 

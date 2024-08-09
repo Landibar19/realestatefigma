@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Box, Grid, Card, CardContent, CardMedia, Typography } from '@mui/material';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
-import { Section8Content } from '../../SectionsContent/Section8Content';
+import { Section8Content } from '../../../api/SectionsContent/Section8Content';
 
 export const Section8 = () => {
     const [expandedStates, setExpandedStates] = useState({});

@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import icon1 from '../../assets/Section2/Icon (1).png';
 import icon2 from '../../assets/Section2/Icon (2).png';
 import icon3 from '../../assets/Section2/Icon (3).png';
-import { PropertyData } from '../Data/PropertyData.js';
+import {PropertyData} from '../../api/Data/PropertyData'
 
 const PropertyDetail = ({ icon, detail }) => (
   <Box sx={{ display: 'flex', flexDirection: 'row', pr: 2 }}>
