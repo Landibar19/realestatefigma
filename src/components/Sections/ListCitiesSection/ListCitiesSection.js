@@ -1,10 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState} from 'react';
 import { Box, Tabs, Tab, Typography, Grid, IconButton } from '@mui/material';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
-import { Section9Content } from '../../../api/SectionsContent/Section9Content';
+import { ListCitiesContent } from '../../../api/SectionsContent/ListCitiesContent';
 import useNavBar from '../../../hooks/useNavBar';
+import {useStyles} from './Styles'
 
-export const Section9 = () => {
+
+
+export const ListCitiesSection = () => {
+  const classes = useStyles();
   const [value, setValue] = useState(0);
 
   const handleChange = (event, newValue) => {
@@ -12,13 +16,13 @@ export const Section9 = () => {
   };
 
   return (
-    <Box sx={{ width: '100%', pt: 4 }}>
-      <Tabs value={value} variant='scrollable' onChange={handleChange} aria-label="section tabs" sx={{ borderBottom: 1, borderColor: 'divider' }}>
-        {Section9Content.map((section, index) => (
-          <Tab label={section.title} key={index} sx={{ textTransform: "capitalize", color: 'black', fontWeight: 'bold' }} />
+    <Box sx={classes.container}>
+      <Tabs value={value} variant='scrollable' onChange={handleChange} aria-label="section tabs" sx={classes.tabs}>
+        {ListCitiesContent.map((section, index) => (
+          <Tab label={section.title} key={index} sx={classes.tab} />
         ))}
       </Tabs>
-      {Section9Content.map((section, index) => (
+      {ListCitiesContent.map((section, index) => (
         <TabPanel value={value} index={index} key={index}>
           {typeof section.content === 'string' ? (
             <Typography color='black'>{section.content}</Typography>
@@ -37,11 +41,12 @@ export const Section9 = () => {
 }
 
 function TabPanel({ children, value, index }) {
+  const classes = useStyles();
   return (
     <div role="tabpanel" hidden={value !== index} id={`tabpanel-${index}`} aria-labelledby={`tab-${index}`}>
       {value === index && (
-        <Box sx={{ p: 3 }}>
-          <Grid container spacing={2}>{children}</Grid>
+        <Box sx={classes.tabPanel}>
+          <Grid container sx={classes.gridContainer}>{children}</Grid>
         </Box>
       )}
     </div>
@@ -49,25 +54,20 @@ function TabPanel({ children, value, index }) {
 }
 
 function CallToActionSection() {
-  const {isMobileView} = useNavBar();
+  const classes = useStyles();
+  const { isMobileView } = useNavBar();
   return (
-    <Box sx={{
-      width: '100%', height: '200px', display: 'flex', justifyContent: 'center', alignItems: 'center',
-      backgroundColor: 'rgba(231, 200, 115, 0.2)', borderRadius: '8px'
-    }}>
-      <Box sx={{ width: '85%', display: 'flex', flexDirection: isMobileView ? 'column' :'row', justifyContent: 'space-between' }}>
-        <Box sx={{ textAlign: 'left' }}>
-          <Typography sx={{ color: 'black', fontSize: 30, fontWeight: 'bold' }}>
+    <Box sx={classes.callToAction}>
+      <Box sx={{ ...classes.callToActionContent, ...(isMobileView && classes.callToActionContentMobile) }}>
+        <Box sx={classes.callToActionText}>
+          <Typography sx={classes.callToActionTitle}>
             Become a real estate agent
           </Typography>
-          <Typography color='black'>
+          <Typography sx={classes.callToActionSubtitle}>
             We only work with the best companies around the globe
           </Typography>
         </Box>
-        <IconButton sx={{
-          width: '170px', height: {xs:'35px', sm:'54px'}, color: 'black', backgroundColor: 'rgba(231, 200, 115, 1)',
-          borderRadius: '8px', display: 'flex', justifyContent: 'space-evenly'
-        }}>
+        <IconButton sx={classes.callToActionButton}>
           Register now
           <ArrowRightAltIcon />
         </IconButton>

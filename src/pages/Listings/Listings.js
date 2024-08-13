@@ -3,7 +3,6 @@ import { Box, Typography } from '@mui/material'
 
 import photo from '../../assets/listing/image.jpeg';
 import { PropertyCard } from '../../components/Card/PropertyCard';
-import { Footer } from '../../components/Footer/Footer';
 
 
 
@@ -43,7 +42,6 @@ export const Listings = () => {
           </Box>
         </Box>
       </Box>
-      <Footer/>
     </Box>
   )
 }

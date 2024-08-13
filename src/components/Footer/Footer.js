@@ -1,4 +1,4 @@
-import { Grid, Typography } from '@mui/material';
+import { Box, Grid, Typography } from '@mui/material';
 import React from 'react';
 import SubscribeSection from './components/SubScribeSection';
 import ContentSection from './components/ContentSection';
@@ -21,7 +21,7 @@ const InfoSection = ({ title, children }) => (
 
 export const Footer = () => {
   return (
-    <div style={{backgroundColor:'black', borderRadius:'16px', padding:2,}}>
+    <Box style={{backgroundColor:'black', borderRadius:'16px', margin: 15}}>
       <Grid container spacing={2} paddingTop={5}>
         <Grid item xs={12} sm={4} md={3}>
           <SubscribeSection/>
@@ -43,6 +43,6 @@ export const Footer = () => {
         <SocialNetwork/>
       </Grid>
   
-    </div>
+    </Box>
   );
 };

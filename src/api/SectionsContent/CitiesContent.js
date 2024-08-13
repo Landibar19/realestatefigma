@@ -5,7 +5,7 @@ import photo4 from  '../../assets/Section3/c4.jpg.png';
 import photo5 from  '../../assets/Section3/c5.jpg.png';
 import photo6 from  '../../assets/Section3/c6.jpg.png';
 
-export const Section3Content = [
+export const CitiesSectionContent = [
     {
         image: photo1,
         propertyNumber: '8 Properties',

@@ -4,7 +4,7 @@ import image3 from '../../assets/Section8/Figure3.png';
 import image4 from '../../assets/Section8/Figure4.png';
 
 
-export const Section8Content = [
+export const ArticleContent = [
     {
         image: image1,
         propertyType: 'Apartment',

@@ -2,40 +2,9 @@ import { Box, IconButton, Typography } from '@mui/material';
 import React, { useState } from 'react';
 import SearchComponent from '../../Search/Search';
 import useNavBar from '../../../hooks/useNavBar';
-import bgImage from '../../../assets/Section1/bgImage.png';
+import useStyles from './Styles';
 
-const useStyles = (isMobileView) => ({
-  sectionContainer: {
-    display: 'flex', 
-    flexDirection: 'column', 
-    alignItems: 'center', 
-    justifyContent: 'center',
-    backgroundImage: `url(${bgImage})`,
-    backgroundRepeat: 'no-repeat',
-    backgroundSize: 'cover',
-    width: '100%',
-    height: '100%', 
-    gap: 3,
-  },
-  titleBox: {
-    border: '1px solid white', 
-    borderRadius: '24px',
-  },
-  mainText: {
-    width: isMobileView ? '90%' : '30%',
-    fontSize: '36px',
-  },
-  navBox: {
-    display: 'flex', 
-    flexDirection: 'row', 
-    gap: 5,
-  },
-  searchBox: {
-    width: isMobileView ? '90%' : '30%',
-  },
-});
-
-export const Section1 = () => {
+export const SearchSection = () => {
   const [active, setActive] = useState('Sale');
   const { isMobileView } = useNavBar();
   const styles = useStyles(isMobileView);

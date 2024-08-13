@@ -4,7 +4,7 @@ import icon3 from '../../assets/Section4/Icon (3).png';
 import icon4 from '../../assets/Section4/Icon (4).png';
 
 
-export const Section4Content = [
+export const WhyUsSectionContent = [
     {
         icon: icon1,
         title: 'Find your future home',

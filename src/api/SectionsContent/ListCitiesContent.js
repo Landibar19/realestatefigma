@@ -1,5 +1,5 @@
 
-export const Section9Content = [
+export const ListCitiesContent = [
     {
         title: 'RealEstate',
          content: [

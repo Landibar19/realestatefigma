@@ -3,7 +3,7 @@ import photo2 from '../../assets/Section5/bg-video.jpg.png';
 import photo3 from '../../assets/Section5/elements (2).png';
 
 
-export const Section5Content ={
+export const PhotoPropertyContent ={
     title:'Best Properties',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit' ,
     image1: photo1,

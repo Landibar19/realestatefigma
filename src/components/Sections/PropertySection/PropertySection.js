@@ -1,12 +1,12 @@
 import React from 'react';
 import { Box, Container, Typography } from '@mui/material'
-import { Section2Content } from '../../../api/SectionsContent/Section2Content';
+import { PropertySectionContent } from '../../../api/SectionsContent/PropertySectionContent';
 import CardSlider from '../../SlideShow/CardSlider';
 
 
 
-export const Section2 = () => {
-    const data = Section2Content;
+export const PropertySection = () => {
+    const data = PropertySectionContent;
   return (
     <Container maxWidth="xxl"
     >

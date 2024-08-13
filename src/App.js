@@ -10,6 +10,8 @@ import NavBar from './components/NavBar/NavBar';
 import { Blog } from './pages/Blog/Blog';
 import { ContactUs } from './pages/Contacts/ContactUs';
 import { Pages } from '@mui/icons-material';
+import { Footer } from './components/Footer/Footer';
+import './App.css'
 
 function App() {
   const theme=useCustomTheme();
@@ -18,7 +20,7 @@ function App() {
     <ThemeProvider theme={theme}>
     <div className="App">
       <Router>
-        <NavBar/>
+      <NavBar/>
         <Routes>
           <Route path="/" element={<HomePage/>} />
           <Route path="/listings" element={<Listings/>} />
@@ -26,9 +28,9 @@ function App() {
           <Route path="/blog" element={<ContactUs/>} />
           <Route path="/pages" element={<Pages/>} />
         </Routes>
+        <Footer/>
       </Router>    
     </div>
-
     </ThemeProvider>
   
   );

@@ -6,7 +6,7 @@ import doropcamIcon from '../../assets/Section7/Link → b4.png.png';
 import logitechIcon from '../../assets/Section7/Link → b5.png.png';
 import spotifyIcon from '../../assets/Section7/Link → b6.png.png';
 
-export const section7Content = {
+export const ReviewContent = {
     companiesIcons: [
         {
             name: 'Amazon',

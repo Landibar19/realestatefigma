@@ -2,7 +2,7 @@ import photo from '../../assets/Section6/photo.png.png';
 import photo1 from '../../assets/Section6/photo1.png';
 
 
-export const section6Content = {
+export const LocalExpertiseContent = {
     image: photo,
     image1: photo1,
     title: 'Local expertise for luxury homes',
