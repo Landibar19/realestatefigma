@@ -17,12 +17,15 @@ const PropertyDetail = ({ icon, detail }) => (
 export const PropertyCard = () => {
   const dispatch = useDispatch();
   const { properties } = useSelector((state) => state.properties.properties);
+
   const [expandedCards, setExpandedCards] = useState({});
 
   useEffect(() => {
+    if (!properties) {
+       dispatch(fetchProperties());
+    }
  
-    dispatch(fetchProperties());
-  }, [dispatch]);
+  }, [dispatch, properties]);
 
 
 
