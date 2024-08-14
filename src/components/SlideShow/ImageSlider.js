@@ -9,7 +9,7 @@ const ImageSlider = ({ images }) => {
   const { currentSlide, prevSlide, nextSlide } = useSlideShow(images);
 
   return (
-    <Box sx={{ position: 'relative', width: '100%', height: 'auto' }}>
+    <Box sx={{ position: 'relative', width:'100%', height: 'auto'}}>
       <IconButton 
       onClick={prevSlide}
       sx={{ 
@@ -19,7 +19,7 @@ const ImageSlider = ({ images }) => {
         border:'1px solid grey',
         borderRadius: '16px',
         backgroundColor: 'grey',
-        width: { xs: '50px', sm: '60px', md: '70px' },
+        width: { xs: '30px', sm: '60px', md: '70px' },
         height: { xs: '30px', sm: '35px', md: '40px' }, 
          }}>
         <ArrowBackIosIcon />
@@ -39,7 +39,7 @@ const ImageSlider = ({ images }) => {
     border: '1px solid grey',
     borderRadius: '24px',
     backgroundColor: 'grey',
-    width: { xs: '50px', sm: '60px', md: '70px' },
+    width: { xs: '30px', sm: '60px', md: '70px' },
     height: { xs: '30px', sm: '35px', md: '40px' }, 
   }}>
         <ArrowForwardIosIcon />

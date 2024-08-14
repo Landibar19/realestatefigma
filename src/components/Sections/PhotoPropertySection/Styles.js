@@ -18,6 +18,12 @@ export const useStyles = () => {
       display: 'flex',
       gap: 4,
     },
+    slideImage: {
+      display: 'flex',
+      flexDirection: {xs:'column',sm:'column',md:'row'},
+      gap: 4,
+      width: '70%',
+    },
     infoBox: {
       position: 'relative',
       width: '100%',

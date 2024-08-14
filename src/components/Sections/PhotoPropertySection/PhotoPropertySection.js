@@ -17,8 +17,11 @@ export const PhotoPropertySection = () => {
         <Box sx={styles.container}>
             <Typography variant="h2" sx={styles.title}>{title}</Typography>
             <Typography variant='h5' sx={styles.description}>{description}</Typography>
+            <Box sx={styles.slideImage} >
             <ImageSlider images={[image1, image2, image3]} />
-            <Box sx={{ ...styles.flexBox, flexDirection: isMobileView ? 'column' : 'row', width: isMobileView ? '100%' : '80%' }}>
+                <img src={image3} alt="" style={styles.mainImage} />
+            </Box>
+            <Box sx={{ ...styles.flexBox, flexDirection: isMobileView ? 'column' : 'row', width: isMobileView ? '100%' : '70%' }}>
                 <Box sx={{ ...styles.infoBox, height: isMobileView ? 150 : 250 }}>
                     <Typography variant="h6">280+</Typography>
                     <Typography>Properties</Typography>
@@ -31,9 +34,7 @@ export const PhotoPropertySection = () => {
                 </Box>
                 <ReactPlayer url={videoUrl} width="100%" height={isMobileView ? 150 : 250} controls />
             </Box>
-            <Box sx={{ ...styles.imageContainer, maxWidth: isMobileView ? '100%' : '80%' }}>
-                <img src={image3} alt="" style={styles.mainImage} />
-            </Box>
+           
         </Box>
     );
 };

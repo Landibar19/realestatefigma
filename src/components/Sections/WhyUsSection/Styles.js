@@ -11,6 +11,7 @@ export const useStyles = () => {
         borderRadius: '16px',
         margin: 'auto',
         padding: '5%',
+        marginTop: 5
     },
     title: {
         color: 'black',

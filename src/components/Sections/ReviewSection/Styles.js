@@ -58,6 +58,7 @@ export const useStyles = () => {
       alignItems: 'center',
       justifyContent: 'center',
       textAlign: 'left',
+      margin:'auto',
     },
     navigationBox: {
       width: '100%',

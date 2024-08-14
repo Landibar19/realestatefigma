@@ -13,7 +13,7 @@ const StatBox = ({styles, children }) => (
 );
 
 const Testimonial = ({ item, isVisible }) => (
-  <div style={{ display: isVisible ? 'block' : 'none' }}>
+  <div style={{ display: isVisible ? 'block' : 'none',width:'100%', justifyContent:'left',alignItems:'flex-start' }}>
     <img src={item.testimonialImage} alt={item.name} />
     <Typography color='black' variant="h6">{item.name}</Typography>
     <Typography variant="subtitle2">{item.position}</Typography>
